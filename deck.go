@@ -48,4 +48,6 @@ func newDeckFromFile(filename string) deck { // no receiver bc dont have deck ye
 		fmt.Println("Error:", err)
 		os.Exit(1)
 	}
+	s := strings.Split(string(bs), ",")
+	return deck(s) // able to do this bc deck is basically []string
 }
